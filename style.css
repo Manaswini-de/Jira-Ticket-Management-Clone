@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0; 
+    /* body by default takes a margin of 8px, to remove that we have written margin 0 */
+}
+
+.container{
+    /* will take the height and width of the entire screen( 100% of visible area) */
+    height: 100vh;
+    width: 100vw;
+}
+/* Note that since navbar is written above grid in html, so the 15% height will be assigned to navbar from the top*/
+.navbar{
+    /* will take just 15% of height of the entire screen, and 100% width*/
+    height: 15vh;
+    width: 100vw;
+    background-color: #3c6382;
+    display: flex;
+
+}
+
+.grid{
+    /* will take the remaining 85% height and 100% width */
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.filters, .action-buttons{
+    border: 1px solid black;
+    height: 50%;
+     /* will take height of 50% of its parent element ie navbar div*/
+
+    background-color: #0a3d62;
+    margin-top: calc( ( 25 / 100) * 15vh ); 
+    /* we need to bring these two divs in the center of the navbar, therefore we need to give it a margin of 25% of its parent(ie. 15vh) */
+    /* calc needs space everywhere */
+
+    margin-left: 5rem;
+}
+
+.filters{
+    width: 12rem;
+    display: flex;
+}
+
+.action-buttons{
+    width: 8rem;
+    display: flex;
+}
+
+.filter{
+    height: 100%;
+    width: 25%;
+    /* since there are 4 filters so each filter needs to occupy 25% of the total space */
+    
+    /* default flex direction is horizontal */
+    display: flex;
+
+    /* this will set your children in horizontal center */
+    justify-content: center;
+
+    /* this will set your children in vertical center */
+    align-items: center;
+}
+
+.filter div{
+    height: 60%;
+    width: 60%;
+    border-radius: 6px;
+}
+
+.filter:hover, .filterSelected{
+    background-color: #60a3bc;
+}
+
+.add, .delete{
+    height: 100%;
+    width: 50%;
+    color: white;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add:hover, .delete:hover, .delete-selected{
+    background-color: #60a3bc;
+}
+
+.pink{
+    background-color: #ef5777;
+}
+
+.blue{
+    background-color: rgb(57, 125, 235);
+}
+.green{
+    background-color: #26de81;
+}
+.black{
+    background-color: black;
+}
+
+.modal{
+    height: 20rem;
+    width: 35rem;
+    display: flex;
+    position: fixed;
+    top: 20vh;
+    left: 50%;
+    /* ye left wala 50% jo hai wo body ki width ka hai  */
+
+    transform: translateX(-50%);
+    /* ye translate wala jo 50% hai wo khudke element ka hai  */
+}
+
+.task-section{
+    height: 100%;
+    width: 70%;
+    background-color: #bdc3c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-inner-container{
+    height: 85%;
+    width: 85%;
+    background-color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow: auto; 
+    /* this basically brings a scroll bar whenevr the content inside the text area is going out of the box of text area */
+
+}
+
+.priority-section{
+    height: 100%;
+    width: 30%;
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.priority-inner-container{
+    height: 90%;
+    width: 60%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modal-priority{
+    height: 22%;
+    width: 80%;
+    border-radius: 1rem;
+}
+
+.modal-priority:hover{
+    border: 6px solid  rgba(255, 255, 255, 0.651);
+}
+
+.selected{
+    border: 6px solid rgba(255, 255, 255, 0.651); 
+}
+
+.ticket{
+    margin: 10px;
+    height: 12.5rem;
+    width: 19rem;
+    border: 2px solid;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ticket-color{
+    width: 100%;
+    height: 10%;
+}
+
+.ticket-id{
+    width: 100%;
+    height: 15%;
+    padding:4px;
+    font-weight: bold;
+}
+
+.actual-task{
+    width: 100%;
+    height: 75%;
+    background-color: beige;
+    text-align: center;
+}
+

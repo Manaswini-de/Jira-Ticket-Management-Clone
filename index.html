@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jira Ticket Management Application</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- to use material icons we need to write this -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="filters">
+                <div class="filter">
+                    <div class="pink"></div>
+                </div>
+                <div class="filter">
+                    <div class="blue"></div>
+                </div>
+                <div class="filter">
+                    <div class="green"></div>
+                </div>
+                <div class="filter">
+                    <div class="black"></div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="add"><span class="material-icons">add_box</span></div>
+                <div class="delete"><span class="material-icons">delete</span></div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <!-- <div class="ticket">
+                <div class="ticket-color pink"></div>
+                <div class="ticket-id">#aecd134</div>
+                <div class="actual-task">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, obcaecati!</div>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
+
+    <script>
+        // will generate a unique id, which can be accessed in the script below by writing uid()
+        let uid = new ShortUniqueId();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
